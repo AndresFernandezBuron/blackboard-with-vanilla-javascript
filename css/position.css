@@ -1,0 +1,67 @@
+/** Copyright © Andrés Fernández Burón
+ *  November of 2021
+ *
+ *  Blackboard with vanilla Javascript
+ *  Application made using HTML, CSS, and JavaScript with the W3C event model.
+ *
+ *  File with the CSS positioning of the application view.
+ */
+
+/* -- ALL THE DOCUMENT -------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh; 
+    overflow: hidden;
+}
+
+header,
+#control thead tr,
+footer {
+    height: 4vh;
+}
+
+/* -- PAGE HEADER ------------------------------------- */
+header {
+
+}
+
+/* -- PAGE MAIN --------------------------------------- */
+
+#control {
+    position: relative;
+    z-index: 5;
+}
+
+#app {
+    position: absolute;
+    top: 9vh;
+    height: 85vh;
+    z-index: 2;
+    padding: 0 5px;
+}
+
+#feedback {
+    z-index: 4;
+    position: relative;
+    top: 5vh;
+    left: 30vw;
+    width: 60vw;
+    padding: 4vh 2vw;
+}
+
+/* -- PAGE FOOTER ------------------------------------- */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+footer p {
+    display: inline-block;
+    padding: 5px 10px;
+}

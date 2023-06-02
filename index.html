@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HTTP HEADERS CONFIGURING ----------------------------------------------------------->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/position.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/popup-message.js"></script>
+    <script src="js/blackboard/functions.js"></script>
+    <script src="js/blackboard/pencil.js"></script>
+    <script src="js/blackboard/blackboard.js"></script>
+    <script src="js/script.js"></script>
+    <title>Pizarra con Vanilla JavaScript</title>
+    <meta name="description" content="Blackboard with vanilla Javacript. It's a simple blackboard made using just HTML, CSS and vanilla Javascript.">
+    <meta name="author" content="Andrés Fernández Burón">
+</head>
+<!-- LA PÁGINA WEB ---------------------------------------------------------------------->
+<body>
+    <header><h1>Blackboard with vanilla Javacript</h1></header>
+    <main>
+        <article>
+            <!---- THE CONTROL PANEL ---->
+            <section id="control">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>
+                                <label for="color">Color:</label>
+                                <input type="color" name="" id="color" value="#ffffff">
+                            </td>
+                            <td>
+                                <label for="fondo">Fondo:</label>
+                                <input type="color" name="" id="fondo" value="#000000">
+                            </td>
+                            <td>
+                                <button id="btnPintar">PINTAR</button>
+                                <button id="btnBorrar">BORRAR</button>
+                            </td>
+                            <td>
+                                <label for="filas">Alto:</label>
+                                <input type="number" id="filas" min="1" max="100" disabled>
+                                <label for="columnas">Ancho:</label>
+                                <input type="number" id="columnas" min="1" max="100" disabled>
+                            </td>
+                            <td>
+                                <label for="pixelesPorPunto">Pixeles Por Punto:</label>
+                                <input type="number" id="pixelesPorPunto" min="1" max="15">
+                            </td>
+                            <td>
+                                <button id="btnAyuda">AYUDA</button>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+            <!---- THE BLACKBOARD ---->
+            <section id="app">
+                <table id="pizarra"></table>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <p>Andrés Fernández Burón</p>
+        <p>&copy; 2021-<span id="this-year"></span></p>
+        <p>November of 2021</p>
+    </footer>
+</body>
+</html>

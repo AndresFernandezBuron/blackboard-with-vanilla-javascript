@@ -1,0 +1,24 @@
+/** Copyright © Andrés Fernández Burón
+ *  November of 2021
+ *
+ *  Blackboard with vanilla Javascript
+ *  Application made using HTML, CSS, and JavaScript with the W3C event model.
+ *
+ *  File with the responsive CSS styles of the application view.
+ */
+
+/* -- SMALL VIEW -------------------------------------- */
+@media screen and (max-width: 580px) {
+
+}
+
+/* -- MEDIUM AND SMALL VIEW --------------------------- */
+@media screen and (min-width: 581px) {
+
+    /* ----  THE FEEDBACK POPUP ---- */
+    #feedback p {
+        font-size: 1.5em;
+        text-shadow: 2px 1px 0 darkslategray;
+    }
+
+}
