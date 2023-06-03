@@ -13,7 +13,7 @@
 /* ---- STATIC CLASS POPUP --------------------------------------------------------- */
 class PopUp {
 
-    // SHOW A POP-UP MESSAGE
+    // SHOW ERROR POP-UP MESSAGE
     static showError( message ) {
         PopUp.show( message, 'error' )
     }

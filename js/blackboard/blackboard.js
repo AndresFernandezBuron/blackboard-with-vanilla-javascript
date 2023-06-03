@@ -51,20 +51,21 @@ function createBlackboard() {
         
         // Las columnas
         for(let j=0 ; j<numColumnas ; j++) {
-            fila.append( document.createElement('td') );
+            fila.appendChild( document.createElement('td') );
         }
 
-        document.getElementById('pizarra').append( fila );
+        document.getElementById('pizarra').appendChild( fila );
     }
 }
 
 // AÑADO LOS LISTENERS A LA PIZARRA 
 function addListenersToBlackboard() {
-    
     let all = document.querySelectorAll('#pizarra td');
+    
     for(let i=0 ; i<all.length ; i++) {
         all[i].addEventListener('click', cambiarEstado);
-        all[i].addEventListener('mousemove', pintar);
+        all[i].addEventListener('dblclick', actuar);
+        all[i].addEventListener('mousemove', actuar);
 
         all[i].style.height = pixelesPorPunto + 'px';
         all[i].style.width = pixelesPorPunto + 'px';
@@ -76,10 +77,11 @@ function addListenersToBlackboard() {
 // ACTUALIZO EL COLOR DE FONDO DE LA PIZARRA
 function updateBackgroundColor() {
     let newColor = document.getElementById('fondo').value;
+    
     let all = document.querySelectorAll('#pizarra td');
-    for(let each of all ) {
-        if( each.style.backgroundColor==backgroundColor ) {
-            each.style.backgroundColor = newColor;
+    for(let i=0 ; i<all.length ; i++) {
+        if( all[i].style.backgroundColor==backgroundColor ) {
+            all[i].style.backgroundColor = newColor;
         }
     }
 
@@ -90,9 +92,10 @@ function updateBackgroundColor() {
 function updatePixelsPerPoint() {
     if( esResolucionValida(numFilas, numColumnas, pixelesPorPunto) ) { 
         let all = document.querySelectorAll('#pizarra td');
-        for(let each of all ) {
-            each.style.height = document.getElementById('pixelesPorPunto').value + 'px';
-            each.style.width = document.getElementById('pixelesPorPunto').value + 'px';
+        
+        for(let i=0 ; i<all.length ; i++) {
+            all[i].style.height = document.getElementById('pixelesPorPunto').value + 'px';
+            all[i].style.width = document.getElementById('pixelesPorPunto').value + 'px';
         }
     } else {
         let msg = '<p>'+pixelesPorPunto+'px no es una resolución valida para este tamaño</p>';
@@ -112,5 +115,6 @@ function esResolucionValida(alto, ancho, pixelesPorPunto) {
     if( ancho*pixelesPorPunto > window.innerWidth*0.8 ) {
         return false;
     }
+    
     return true;
 }

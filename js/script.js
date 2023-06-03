@@ -13,6 +13,8 @@
 
 // Cuándo se ha terminado de cargar el documento HTML y el DOM
 window.onload = function() {
+    
+    document.getElementById('this-year').innerText = getStrYear();
 
     // Muestro el panel de ayuda
     mostrarPopupAyuda();
@@ -23,9 +25,10 @@ window.onload = function() {
     // Añado el listener al evento CHANGE del INPUT:COLOR para seleccionar el color del pincel
     document.getElementById('fondo').addEventListener('change', updateBackgroundColor);
 
-    // Añado el listener al evento CLICK del BUTTON para pintar con el pincel
+    // Añado el listener al evento CLICK de los BUTTON para pintar, borrar, etc
     document.getElementById('btnPintar').addEventListener('click', seleccionarColor);
     document.getElementById('btnBorrar').addEventListener('click', seleccionarBorrador);
+
     document.getElementById('btnAyuda').addEventListener('click', mostrarPopupAyuda);
 
     // Añado el listener al evento CHANGE del INPUT:NUMBER para seleccionar el número de píxeles por punto
