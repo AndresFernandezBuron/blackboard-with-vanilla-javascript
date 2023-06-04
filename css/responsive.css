@@ -8,12 +8,31 @@
  */
 
 /* -- SMALL VIEW -------------------------------------- */
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 480px) {
+
+    /* ----  THE PAGE FOOTER ---- */
+    footer p {
+        width: 48vw;
+        font-size: .8em;
+    }
+    footer p:first-child {
+        display: none;
+    }
 
 }
 
-/* -- MEDIUM AND SMALL VIEW --------------------------- */
-@media screen and (min-width: 581px) {
+/* -- MEDIUM AND BIG VIEW ----------------------------- */
+@media screen and (min-width: 481px) {
+
+    /* ----  ALL THE DOCUMENT ---- */
+    button {
+        font-size: 1em;
+    }
+
+    /* ----  THE OPTIONS PANEL ---- */
+    #opciones {
+        max-width: 40vw;
+    }
 
     /* ----  THE FEEDBACK POPUP ---- */
     #feedback p {
@@ -21,4 +40,8 @@
         text-shadow: 2px 1px 0 darkslategray;
     }
 
+    /* ----  THE PAGE FOOTER ---- */
+    footer p {
+        width: 30vw;
+    }
 }

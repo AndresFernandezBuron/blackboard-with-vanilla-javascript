@@ -8,7 +8,7 @@
  */
 
 /* -- ALL THE DOCUMENT -------------------------------- */
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
 }
@@ -18,27 +18,31 @@ body {
     overflow: hidden;
 }
 
-header,
-#control thead tr,
-footer {
+header {
     height: 4vh;
 }
-
-/* -- PAGE HEADER ------------------------------------- */
-header {
-
+#control {
+    height: 5vh;
+}
+footer {
+    height: 3vh;
 }
 
-/* -- PAGE MAIN --------------------------------------- */
+/* -- THE PAGE HEADER --------------------------------- */
+header {
+    overflow: hidden;
+}
 
-#control {
+/* -- THE PAGE MAIN ----------------------------------- */
+
+#control-panel {
     position: relative;
     z-index: 5;
 }
 
 #app {
     position: absolute;
-    top: 9vh;
+    top: 10vh;
     height: 85vh;
     z-index: 2;
     padding: 0 5px;
@@ -46,14 +50,14 @@ header {
 
 #feedback {
     z-index: 4;
-    position: relative;
-    top: 5vh;
+    position: absolute;
+    top: 20vh;
     left: 30vw;
     width: 60vw;
-    padding: 4vh 2vw;
+    padding: 4vh 2vw 2vh 2vw;
 }
 
-/* -- PAGE FOOTER ------------------------------------- */
+/* -- THE PAGE FOOTER --------------------------------- */
 footer {
     position: absolute;
     bottom: 0;
@@ -63,5 +67,4 @@ footer {
 }
 footer p {
     display: inline-block;
-    padding: 5px 10px;
 }

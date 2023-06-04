@@ -28,6 +28,10 @@ window.onload = function() {
     // Añado el listener al evento CLICK de los BUTTON para pintar, borrar, etc
     document.getElementById('btnPintar').addEventListener('click', seleccionarColor);
     document.getElementById('btnBorrar').addEventListener('click', seleccionarBorrador);
+    
+    // Añado el listener al evento CLICK del BUTTON para mostrar/ocultar el panel de opciones
+    document.getElementById('btnOpciones').addEventListener('click', alternarrMenuOPciones);
+    document.getElementById('opciones').style.display = 'none';
 
     document.getElementById('btnAyuda').addEventListener('click', mostrarPopupAyuda);
 

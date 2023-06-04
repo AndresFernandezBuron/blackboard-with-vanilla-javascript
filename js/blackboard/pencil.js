@@ -46,25 +46,41 @@ function seleccionarBorrador() {
 }
 
 // CAMBIO EL ESTADO DE LA BANDERA (actuando o no)
-function cambiarEstado() {
+function cambiarEstado( self ) {
 
     // Actualizo el valor de las variables globales
     estoyActuando = ! estoyActuando;
+    
+    actuar( (self==undefined) ? this : self );
+}
+
+// SELECCIONO UN PUNTO DE LA TABLA
+function seleccionar() {
+    cambiarEstado(this);
+    cambiarEstado(this);
 }
 
 // ACTÚO SOBRE UN PUNTO DE LA PIZARRA (si estoy actuando)
-function actuar() {
+function actuar( self ) {
 
     if( estoyActuando ) {
+        let point = null;
+        if( this!=undefined && this.style!=undefined ) {
+            point = this;
+        } 
+        else if( self!=undefined && self.style!=undefined ) {
+            point = self;
+        } 
+        else if( self.target!=undefined && self.target.style!=undefined ) {
+            point = self.target;
+        }
         
         switch( accion ) {
             case 'PINTAR':
-                this.style.backgroundColor = color;
+                point.style.backgroundColor = color;
                 break;
             case 'BORRAR':
-                this.style.backgroundColor = backgroundColor;
-                break;
-            default:
+                point.style.backgroundColor = backgroundColor;
                 break;
         }
     }

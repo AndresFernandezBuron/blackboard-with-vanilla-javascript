@@ -28,7 +28,7 @@ class PopUp {
         let btnCerrar = document.createElement('button');
         btnCerrar.id = 'btnCerrarDialogo';
         btnCerrar.innerText = 'ACEPTAR';
-        btnCerrar.onclick = PopUp.close;
+        btnCerrar.addEventListener('click', PopUp.close, {once:true});
 
         let feedback = document.createElement('div');
         feedback.id = 'feedback';
@@ -40,7 +40,6 @@ class PopUp {
 
     // CLOSE A POP-UP MESSAGE
     static close() {
-        document.getElementById('btnCerrarDialogo').onclick = null;
         document.getElementById('feedback').remove();
     }
 

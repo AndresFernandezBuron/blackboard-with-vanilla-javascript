@@ -11,6 +11,22 @@
 
 /* -------------- FUNCTIONS ----------------------- */
 
+// OCULTO EL PANEL DE OPCIONES
+function cerrarMenuOPciones() {
+    document.getElementById('opciones').style.display = 'none';
+}
+
+// MUESTRO U OCULTO EL PANEL DE OPCIONES
+function alternarrMenuOPciones() {
+    let panel = document.getElementById('opciones');
+    
+    panel.style.display = (panel.style.display=='none') ? 'inherit': 'none';
+
+    if( panel.style.display=='inherit' ) {
+        document.getElementById('app').addEventListener('click', cerrarMenuOPciones,  {once:true} );
+    }
+}
+
 // MUESTRO EL POP-UP DE AYUDA
 function mostrarPopupAyuda() {
     PopUp.show(`

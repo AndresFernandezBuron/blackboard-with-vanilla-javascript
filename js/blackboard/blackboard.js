@@ -12,8 +12,8 @@
 /* -------------- GLOBAL VARS --------------------- */
 
 // El número de filas y columnas de la pizarra
-var numFilas = 50;
-var numColumnas = 50;
+var numFilas = 80;
+var numColumnas = 80;
 
 // El color de fondo seleccionado
 var backgroundColor = 'rgb(0, 0, 0)';
@@ -64,7 +64,7 @@ function addListenersToBlackboard() {
     
     for(let i=0 ; i<all.length ; i++) {
         all[i].addEventListener('click', cambiarEstado);
-        all[i].addEventListener('dblclick', actuar);
+        all[i].addEventListener('dblclick', seleccionar );
         all[i].addEventListener('mousemove', actuar);
 
         all[i].style.height = pixelesPorPunto + 'px';
@@ -76,6 +76,8 @@ function addListenersToBlackboard() {
 
 // ACTUALIZO EL COLOR DE FONDO DE LA PIZARRA
 function updateBackgroundColor() {
+    cerrarMenuOPciones();
+
     let newColor = document.getElementById('fondo').value;
     
     let all = document.querySelectorAll('#pizarra td');
@@ -90,9 +92,10 @@ function updateBackgroundColor() {
 
 // ACTUALIZO EL TAMAÑO DE LOS PUNTOS QUE COMPONEN LA PIZARRA
 function updatePixelsPerPoint() {
+    cerrarMenuOPciones();
+    
     if( esResolucionValida(numFilas, numColumnas, pixelesPorPunto) ) { 
         let all = document.querySelectorAll('#pizarra td');
-        
         for(let i=0 ; i<all.length ; i++) {
             all[i].style.height = document.getElementById('pixelesPorPunto').value + 'px';
             all[i].style.width = document.getElementById('pixelesPorPunto').value + 'px';

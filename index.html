@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- HTTP HEADERS CONFIGURING ----------------------------------------------------------->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/position.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script src="js/popup-message.js"></script>
     <script src="js/blackboard/functions.js"></script>
     <script src="js/blackboard/pencil.js"></script>
@@ -16,15 +16,30 @@
     <meta name="description" content="Blackboard with vanilla Javacript. It's a simple blackboard made using just HTML, CSS and vanilla Javascript.">
     <meta name="author" content="Andrés Fernández Burón">
 </head>
-<!-- THE WEBPAGE ------------------------------------------------------------------------>
 <body>
     <header><h1>Blackboard with vanilla Javacript</h1></header>
     <main>
         <article>
-            <!---- THE CONTROL PANEL -->
-            <section id="control">
-                <table>
+            <!-- THE CONTROL PANEL -->
+            <section id="control-panel">
+                <table id="control">
                     <thead>
+                        <tr>
+                            <td>
+                                <input type="color" name="" id="color" value="#ffffff">
+                                <button id="btnPintar">PINTAR</button>
+                                <button id="btnBorrar">BORRAR</button>
+                            </td>
+                            <td>
+                                <button id="btnOpciones">OPCIONES</button>
+                            </td>
+                            <td>
+                                <button id="btnAyuda">AYUDA</button>
+                            </td>
+                        </tr>
+                    </thead>
+                    <!--
+                    <tbody>
                         <tr>
                             <td>
                                 <label for="color">Color:</label>
@@ -52,11 +67,34 @@
                                 <button id="btnAyuda">AYUDA</button>
                             </td>
                         </tr>
-                    </thead>
-                    <tbody></tbody>
+                    </tbody>
+                -->
+                </table>
+                <table id="opciones">
+                    <tbody>
+                        <tr>
+                            <tr>
+                                <td><label for="fondo">Fondo:</label></td>
+                                <td><input type="color" name="" id="fondo" value="#000000"></td>
+                            </tr>
+                        </tr>
+                        <tr>
+                            <td><label for="filas">Alto:</label></td>
+                            <td><input type="number" id="filas" min="1" max="100" disabled></td>
+                            <td><label for="columnas">Ancho:</label></td>
+                            <td><input type="number" id="columnas" min="1" max="100" disabled></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pixelesPorPunto">Resolucion:</label></td>
+                            <td>
+                                <input type="number" id="pixelesPorPunto" min="1" max="15">
+                                <label for="pixelesPorPunto">px</label>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </section>
-            <!---- THE BLACKBOARD -->
+            <!-- THE BLACKBOARD -->
             <section id="app">
                 <table id="pizarra"></table>
             </section>

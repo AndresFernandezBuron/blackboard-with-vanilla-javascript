@@ -3,7 +3,7 @@
 <p align="center">Application made with vanilla Javascript and using the W3C event model.</p>
 <br>
 <div>
-<table align="center"><tbody>
+<table align="center" border="0" cellpadding="0" cellspacing="0"><tbody>
 <tr>
 <td>Author</td>
 <td>Andrés Fernández Burón</td>
