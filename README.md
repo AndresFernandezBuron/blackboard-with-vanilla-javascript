@@ -50,34 +50,30 @@ Simplemente abre la carpeta y haz doble click en el fichero index.html (o ábrel
 ## Dependencias
 Este proyecto no tiene dependencias de terceros.
 
-## Soportado
-<table align="center" border="2"><tbody>
-<tr align="left" valign="top">
-<td>
+<br>
+
+## Compatibilidad
+<table align="left" border="0"><tbody><tr><td>
 
 | Entrada         | Soportado  |
 |-----------------|------------|
-| Cursor          |<center>&#10004;</center>|
+| Cursor          | <center>&#10004;</center> |
 | Pantalla táctil | Todavía no |
-| | |
-</td>
-<td>
+</td></tr></tbody></table>
+<table align="left" border="0"><tbody><tr><td>
 
 | Navegador web | Soportado      |
 |---------------|----------------|
-| Firefox       |<center>&#10004;</center>|
-| Chrome        |<center>&#10004;</center>|
-| Opera         | Sin probar aún |
-| Midori        | Sin probar aún |
-| Safari        | Sin probar aún |
-| Edge          |<center>&#10004;</center>|
-| IE            | Todavía no     |
-| Other         | Sin probar aún |
-| | |
-</td>
-</tr>
-</tbody></table>
-<br>
+| Firefox       | <center>&#10004;</center> |
+| Chrome        | <center>&#10004;</center> |
+| Opera         | Sin probar |
+| Midori        | Sin probar |
+| Safari        | Sin probar |
+| Edge          | <center>&#10004;</center> |
+| IE            | Todavía no |
+| Other         | Sin probar |
+</td></tr></tbody></table>
+<br clear="both">
 </div>
 <br>
 <div id="readme-en">
@@ -112,31 +108,27 @@ This project has no third-party dependencies.
 
 <br>
 
-## Support
-<table align="center" border="2"><tbody>
-<tr valign="top">
-<td align="left">
+## Compatibility
+<table align="left" border="0"><tbody><tr><td>
 
-| Input         | Supported |
-|------------------|--------|
-| Cursor           |<center>&#10004;</center>|
-| Touchable screen |<center>Not yet<center>|
-| | |
-</td>
-<td align="right">
+| Input            | Supported |
+|------------------|-----------|
+| Cursor           | <center>&#10004;</center> |
+| Touchable screen | <center>Not yet<center> |
+</td></tr></tbody></table>
+
+<table align="left" border="0"><tbody><tr><td>
 
 | Web browser | Supported  |
 |-------------|------------|
-| Firefox     | <center>&#10004;</center>|
-| Chrome      | <center>&#10004;</center>|
+| Firefox     | <center>&#10004;</center> |
+| Chrome      | <center>&#10004;</center> |
 | Opera       | Not tested |
 | Midori      | Not tested |
 | Safari      | Not tested |
-| Edge        | <center>&#10004;</center>|
+| Edge        | <center>&#10004;</center> |
 | IE          | Not yet    |
 | Other       | Not tested |
-| | |
-</td>
-</tr>
-</tbody></table>
+</td></tr></tbody></table>
+
 </div>
